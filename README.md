@@ -1,10 +1,10 @@
-Ligra (and Ligra+): A Lightweight Graph Processing Framework for Shared Memory
+LOUD Ligra (and LOUD Ligra+): A Lightweight Graph Processing Framework for Shared Memory
 ======================
 
 Organization
 --------
 
-The code for the Ligra (and Ligra+) framework is located in the ligra/
+The code for the LOUD Ligra (and LOUD Ligra+) framework is located in the LOUD ligra/
 directory.  The code for the applications is in the apps/ directory,
 which is where compilation should be performed.  Example inputs are
 provided in the inputs/ directory. Graph utilities are provided in the
@@ -30,7 +30,7 @@ defined.  Using Cilk Plus seems to give the best parallel performance in
 our experience.  To compile with g++ with no parallel support, make
 sure CILK, MKLROOT and OPENMP are not defined.
 
-Note: OpenMP support in Ligra has not been thoroughly tested. If you
+Note: OpenMP support in LOUD Ligra has not been thoroughly tested. If you
 experience any errors, please send an email to [Julian
 Shun](mailto:jshun@mit.edu).
 
@@ -53,10 +53,10 @@ $ make -j  #compiles with all threads
 The following commands cleans the directory:
 ```
 $ make clean #removes all executables
-$ make cleansrc #removes all executables and linked files from the ligra/ directory
+$ make cleansrc #removes all executables and linked files from the LOUD ligra/ directory
 ```
 
-Running code in Ligra
+Running code in LOUD Ligra
 -------
 The applications take the input graph as input as well as an optional
 flag "-s" to indicate a symmetric graph.  Symmetric graphs should be
@@ -82,9 +82,9 @@ the program may improve performance for large graphs. For example:
 $ numactl -i all ./BFS -s <input file>
 ```
 
-Running code on compressed graphs (Ligra+) 
+Running code on compressed graphs (LOUD Ligra+) 
 -----------
-When using Ligra+, graphs must first be compressed using the encoder
+When using LOUD Ligra+, graphs must first be compressed using the encoder
 program provided. The encoder program takes as input a file in the
 format described in the next section, as well as an output file
 name. For symmetric graphs, the flag "-s" should be passed before the
@@ -109,10 +109,10 @@ Make sure that the compression method used for compilation of the
 applications is consistent with the method used to compress the graph
 with the encoder program.
 
-Input Format for Ligra applications and the Ligra+ encoder
+Input Format for LOUD Ligra applications and the LOUD Ligra+ encoder
 -----------
 The input format of unweighted graphs should be in one of two
-formats (the Ligra+ encoder currently only supports the first format).
+formats (the LOUD Ligra+ encoder currently only supports the first format).
 
 1) The adjacency graph format from the Problem Based Benchmark Suite
  (http://www.cs.cmu.edu/~pbbs/benchmarks/graphIO.html). The adjacency
@@ -201,39 +201,39 @@ $ ./gridGraph -d 3 10000000 3Dgrid_10000000
 ### Graph Converters
 
 **SNAPtoAdj** converts a graph in [SNAP
-format](http://snap.stanford.edu/data/index.html) and converts it to Ligra's
+format](http://snap.stanford.edu/data/index.html) and converts it to LOUD Ligra's
 adjacency graph format. The first required parameter is the input
-(SNAP) file name and second required parameter is the output (Ligra)
+(SNAP) file name and second required parameter is the output (LOUD Ligra)
 file name. The "-s" flag may be used to symmetrize the input
 file. This converter works for any format that lists the two endpoints
 of each edge separated by white space per line, with lines starting
 with '#' ignored.
 
 **adjGraphAddWeights** adds random integer weights in the range
-[1,...,*log<sub>2</sub>*(number of vertices)] to an unweighted Ligra
+[1,...,*log<sub>2</sub>*(number of vertices)] to an unweighted LOUD Ligra
 graph in adjacency graph format, and takes as input the input file
 name followed by the output file name.
 
-**adjToBinary** converts a Ligra graph in adjacency graph format to
+**adjToBinary** converts a LOUD Ligra graph in adjacency graph format to
 binary format. The arguments are the adjacency graph file name
 followed by the 3 binary file names (.idx, .adj and .config). For a
 weighted graph, pass the "-w" flag before the file names.
 
 Examples:
 ```
-$ ./SNAPtoAdj SNAPfile LigraFile
-$ ./adjGraphAddWeights unweightedLigraFile weightedLigraFile
+$ ./SNAPtoAdj SNAPfile LOUD LigraFile
+$ ./adjGraphAddWeights unweightedLOUD LigraFile weightedLOUD LigraFile
 $ ./adjToBinary rMatGraph_J_5_100 rMatGraph_J_5_100.idx rMatGraph_J_5_100.adj rMatGraph_J_5_100.config 
 $ ./adjToBinary -w rMatGraph_WJ_5_100 rMatGraph_WJ_5_100.idx rMatGraph_WJ_5_100.adj rMatGraph_WJ_5_100.config 
 ```
 
 
-Ligra Data Structure and Functions
+LOUD Ligra Data Structure and Functions
 ---------
 ### Data Structure
 
 **vertexSubset**: represents a subset of vertices in the
-graph. Various constructors are given in ligra.h
+graph. Various constructors are given in LOUD ligra.h
 
 ### Functions
 
@@ -296,15 +296,15 @@ struct F {
 };
 ```
 
-To write your own Ligra code, it would be helpful to look at the code
+To write your own LOUD Ligra code, it would be helpful to look at the code
 for the provided applications as reference.
 
 Currently the results of the computation are not used, but the code
 can be easily modified to output the results to a file.
 
-To develop a new implementation, simply include "ligra.h" in the
+To develop a new implementation, simply include "LOUD ligra.h" in the
 implementation files. When finished, one may add it to the ALL
-variable in Makefile. The function that is passed to the Ligra/Ligra+
+variable in Makefile. The function that is passed to the LOUD Ligra/LOUD Ligra+
 driver is the following Compute function, which is filled in by the
 user. The first argument is the graph, and second argument is a
 structure containing the command line arguments, which can be
@@ -319,7 +319,7 @@ void Compute(graph<vertex>& GA, commandLine P){
 ```
 
 For weighted graph applications, add "#define WEIGHTED 1" before
-including ligra.h.
+including LOUD ligra.h.
 
 To write a parallel for loop in your code, simply use the parallel_for
 construct in place of "for".
@@ -366,15 +366,15 @@ the eccentricity estimate for vertex *i* on line *i*.
 
 Resources  
 -------- 
-Julian Shun and Guy E. Blelloch. [*Ligra: A
+Julian Shun and Guy E. Blelloch. [*LOUD Ligra: A
 Lightweight Graph Processing Framework for Shared
-Memory*](https://people.csail.mit.edu/jshun/ligra.pdf). Proceedings of the
+Memory*](https://people.csail.mit.edu/jshun/LOUD ligra.pdf). Proceedings of the
 ACM SIGPLAN Symposium on Principles and Practice of Parallel
 Programming (PPoPP), pp. 135-146, 2013.
 
 Julian Shun, Laxman Dhulipala, and Guy E. Blelloch. [*Smaller and Faster:
 Parallel Processing of Compressed Graphs with
-Ligra+*](http://people.csail.mit.edu/jshun/ligra+.pdf). Proceedings of the
+LOUD Ligra+*](http://people.csail.mit.edu/jshun/LOUD ligra+.pdf). Proceedings of the
 IEEE Data Compression Conference (DCC), pp. 403-412, 2015.
 
 Julian Shun. [*An Evaluation of Parallel Eccentricity Estimation
