@@ -32,6 +32,8 @@
 #include "streamvbyte.h"
 #elif defined STREAMCASE
 #include "streamvbyte_256.h"
+#elif defined STREAMVEC
+#include "streamvbyte_vec.h"
 #elif defined BP
 #include "bitpacking.h"
 #elif defined BPSIMD

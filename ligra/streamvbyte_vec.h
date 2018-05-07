@@ -103,21 +103,20 @@ inline intE eatFirstEdge(uchar controlKey, uintE source, long & dOffset, long co
 static inline intE _decode_data(uint8_t **dataPtrPtr, uint8_t code){
 	uint8_t *dataPtr = *dataPtrPtr;
 	uintE edgeRead = 0;
-	uintE* edgeReadPtr = &edgeRead;
 	if(code ==0){
 		edgeRead = *dataPtr;
 		dataPtr += 1;
 	}
 	else if(code ==1){
-		memcpy(&edgeReadPtr, dataPtr, 2);
+		edgeRead = (*(uint16_t *) dataPtr);
 		dataPtr +=2;
 	}
 	else if(code ==2){
-		memcpy(&edgeReadPtr, dataPtr, 3);
+		edgeRead = (*(uint32_t *) dataPtr) & (0xFFFFFF);
 		dataPtr +=3;
 	}
 	else{
-		memcpy(&edgeReadPtr, dataPtr, 4);
+		edgeRead = *(uint32_t *) dataPtr;
 		dataPtr += 4;
 	}
 	
@@ -129,13 +128,12 @@ static inline intE _decode_data(uint8_t **dataPtrPtr, uint8_t code){
 
 template <class T>
 void svb_decode_scalar(size_t edgesRead, uchar* dataPointer, uchar* controlPointer, uintT degree, intE* previousEdge, T t, const uintE &source, bool firstEdge){
-	if(degree >  0){
-	intE edge = *previousEdge;	
+	if(degree > 0){
+	intE edge = *previousEdge;
 	uintT shift = 0;
 	uintT key = *controlPointer++;
 	uintT i = 0;
 	intE val;
-	intE* valPtr;
 	if (firstEdge == 1){
 		uchar firstKey = key & 0x3;
 		uintT signBit = 0;
@@ -146,19 +144,19 @@ void svb_decode_scalar(size_t edgesRead, uchar* dataPointer, uchar* controlPoint
 			dataPointer += 1;
 		}
 		else if(firstKey == 1){
-			memcpy(&valPtr, dataPointer, 2);
+			val = (*(uint16_t *) dataPointer);
 			signBit = (((1 << 15) & val) >> 15);
 			val = val & 0x7FFF;
 			dataPointer += 2;
 		}
 		else if(firstKey == 2){
-			memcpy(&valPtr, dataPointer, 3);
+			val = (*(uint32_t *) dataPointer) & (0xFFFFFF);
 			signBit = (((1 << 23) & val) >> 23);
 			val = val & 0x7FFFFF;
 			dataPointer += 3;
 		}
 		else{
-			memcpy(&valPtr, dataPointer, 4);
+			val = (*(uint32_t *) dataPointer);
 			signBit = (((1 << 31) & val) >> 31);
 			val = val & 0x7FFFFFFF;
 			dataPointer += 4;
@@ -190,19 +188,19 @@ void svb_decode_scalar(size_t edgesRead, uchar* dataPointer, uchar* controlPoint
 }
 template <class T>
 static inline bool _write_avx(__m128i Vec, intE* prevEdge, const uintE &source, T t, size_t edgesRead){
-	intE edge = Vec[0] + *prevEdge;
+	intE edge = *prevEdge + ((uint32_t *)&Vec)[0];
 	if(!t.srcTarg(source, edge, edgesRead)){
 		return 1;
 	}
-	edge = edge + Vec[1];
+	edge = edge + ((uint32_t *)&Vec)[1];
 	if(!t.srcTarg(source, edge, edgesRead+1)){
 		return 1;
 	}
-	edge = edge + Vec[2];
+	edge = edge + ((uint32_t *)&Vec)[2];
 	if(!t.srcTarg(source, edge, edgesRead+2)){
 		return 1;
 	}
-	edge = edge + Vec[3];
+	edge = edge + ((uint32_t *)&Vec)[3];
 	if(!t.srcTarg(source, edge, edgesRead+3)){
 		return 1;
 	}
@@ -417,7 +415,6 @@ template <class T>
 		bool firstEdge = 1;
 		bool break_var = 0;
 		if (keybytes >= 8){
-			cout << "keybytes: " << keybytes << endl;
 			int64_t Offset = -(int64_t) keybytes /8 + 1; 
 			const uint64_t *keyPtr64  = (const uint64_t *)edgeStart - Offset;
 			uint64_t nextkeys;
@@ -428,27 +425,29 @@ template <class T>
 				keys = nextkeys;
 				memcpy(&nextkeys, keyPtr64 + Offset + 1, sizeof(nextkeys));
 				Data = _decode_avx((keys & 0xFF), &dataPtr);
-				if (firstEdge == 1){
+			    if (firstEdge == 1){
+			    	uint32_t *Data32 = ((uint32_t *)&Data);
 					uchar firstKey = keys & 0x3;
 					uchar signBit = 0;
 					if(firstKey == 0){
-						signBit = (uchar)(((Data[0]) & 0x80) >> 15);
-						Data[0] = Data[0] & 0x7F;
+						signBit = (uchar)(((Data32[0]) & 0x80) >> 7);
+						Data32[0] = Data32[0] & 0x7F;
 					}
 					else if(firstKey == 1){
-						signBit = (uchar)(((1 << 15) & Data[0]) >> 15);
-						Data[0] = Data[0] & 0x7FFF;
+						signBit = (uchar)(((1 << 15) & Data32[0]) >> 15);
+						Data32[0] = Data32[0] & 0x7FFF;
 					}
 					else if(firstKey == 2){
-						signBit = (uchar)(((1 << 23) & Data[0]) >> 23);
-						Data[0] = Data[0] & 0x7FFFFF;
+						signBit = (uchar)(((1 << 23) & Data32[0]) >> 23);
+						Data32[0] = Data32[0] & 0x7FFFFF;
 					}
 					else{
-						signBit = (uchar)(((1 << 31) & Data[0]) >> 31);
-						Data[0] = Data[0] & 0x7FFFFFFF;
+						signBit = (uchar)(((1 << 31) & Data32[0]) >> 31);
+						Data32[0] = Data32[0] & 0x7FFFFFFF;
 					}
-					Data[0] = (signBit) ? source - Data[0] : source + Data[0];	
+					Data32[0] = (signBit) ? source - Data32[0] : source + Data32[0];	
 					firstEdge = 0;
+					Data = *((__m128i *)Data32);
 				}
 				break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
 				if(break_var)
@@ -495,46 +494,70 @@ template <class T>
 				if(break_var)
 					return;
 				edgesRead += 4;
-    			}	
-	if(!break_var){
-	      keys = nextkeys;
-		cout << "!break_var if statement" << endl;
-	      Data = _decode_avx((keys & 0xFF), &dataPtr);
-	      break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
-		edgesRead += 4;
-	      Data = _decode_avx((keys & 0xFF00) >> 8, &dataPtr);
-		break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
-		edgesRead += 4;
+    		}
+   
+			if(!break_var){
+			    keys = nextkeys;
 
-	      keys >>= 16;
-	      Data = _decode_avx((keys & 0xFF), &dataPtr);
-		break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
-		edgesRead += 4;
-	      Data = _decode_avx((keys & 0xFF00) >> 8, &dataPtr);
-		break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
-		edgesRead += 4;
+			    Data = _decode_avx((keys & 0xFF), &dataPtr);
+			    if (firstEdge == 1){
+			    	uint32_t *Data32 = ((uint32_t *)&Data);
+					uchar firstKey = keys & 0x3;
+					uchar signBit = 0;
+					if(firstKey == 0){
+						signBit = (uchar)(((Data32[0]) & 0x80) >> 7);
+						Data32[0] = Data32[0] & 0x7F;
+					}
+					else if(firstKey == 1){
+						signBit = (uchar)(((1 << 15) & Data32[0]) >> 15);
+						Data32[0] = Data32[0] & 0x7FFF;
+					}
+					else if(firstKey == 2){
+						signBit = (uchar)(((1 << 23) & Data32[0]) >> 23);
+						Data32[0] = Data32[0] & 0x7FFFFF;
+					}
+					else{
+						signBit = (uchar)(((1 << 31) & Data32[0]) >> 31);
+						Data32[0] = Data32[0] & 0x7FFFFFFF;
+					}
+					Data32[0] = (signBit) ? source - Data32[0] : source + Data32[0];	
+					firstEdge = 0;
+					Data = *((__m128i *)Data32);
+				}
+			    break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
+				edgesRead += 4;
+			    Data = _decode_avx((keys & 0xFF00) >> 8, &dataPtr);
+				break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
+				edgesRead += 4;
 
-	      keys >>= 16;
-	      Data = _decode_avx((keys & 0xFF), &dataPtr);
-		break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
-		edgesRead += 4;
-	      Data = _decode_avx((keys & 0xFF00) >> 8, &dataPtr);
-		break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
-		edgesRead += 4;
+			    keys >>= 16;
+			    Data = _decode_avx((keys & 0xFF), &dataPtr);
+				break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
+				edgesRead += 4;
+			    Data = _decode_avx((keys & 0xFF00) >> 8, &dataPtr);
+				break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
+				edgesRead += 4;
 
-	      keys >>= 16;
-	      Data = _decode_avx((keys & 0xFF), &dataPtr);
-		break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
-		edgesRead += 4;
-	      Data = _decode_avx((keys & 0xFF00) >> 8, &dataPtr);
-		break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
-		edgesRead += 4;
-	}	
+			    keys >>= 16;
+			    Data = _decode_avx((keys & 0xFF), &dataPtr);
+				break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
+				edgesRead += 4;
+			    Data = _decode_avx((keys & 0xFF00) >> 8, &dataPtr);
+				break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
+				edgesRead += 4;
 
-	}
-	controlPtr += (degree/4) & ~7;	
+			    keys >>= 16;
+			    Data = _decode_avx((keys & 0xFF), &dataPtr);
+				break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
+				edgesRead += 4;
+			    Data = _decode_avx((keys & 0xFF00) >> 8, &dataPtr);
+				break_var = _write_avx(Data, &prevEdge, source, t, edgesRead);
+				edgesRead += 4;
+			}	
+		}
+		controlPtr += (degree/4) & ~7;	
 
-	svb_decode_scalar(edgesRead, dataPtr, controlPtr, (degree & 31), &prevEdge, t, source, firstEdge);
+		svb_decode_scalar(edgesRead, dataPtr, controlPtr, (degree & 31), &prevEdge, t, source, firstEdge);
 	}
 
 }
@@ -605,6 +628,7 @@ uintE *parallelCompressEdges(uintE *edges, uintT *offsets, long n, long m, uintE
 	free(compressionStarts);
 	cout << "finished compressing, bytes used = " << totalSpace << endl;
 	cout << "would have been, " << (m*4) << endl;
+
 	return ((uintE *)finalArr);
 }
 
