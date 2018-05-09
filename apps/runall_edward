@@ -1,0 +1,72 @@
+#!/usr/bin/python
+#
+# run all tests
+#
+
+import os
+import sys
+import signal
+import time
+import subprocess
+
+# nibble = 0, byte = 1, rle = 2, streamvec = 3, streamcase = 4, bitpacking = 5, varint-GB = 6 
+# change the compression number depending on the method
+compression_num = 3;	
+
+def signal_handler(signal,frame):
+  print "bye\n"
+  sys.exit(0)
+signal.signal(signal.SIGINT,signal_handler)
+
+def shellGetOutput(str) :
+  process = subprocess.Popen(str,shell=True,stdout=subprocess.PIPE,
+                             stderr=subprocess.PIPE)
+  output, err = process.communicate()
+  
+  if (len(err) > 0):
+      raise NameError(str+"\n"+output+err)
+  return output
+
+dataDir = "../inputs/"
+applications = ["BFS","BC","Radii","Components"]
+rapplications = ["PageRank"]
+
+# this file tests twitter_J and com-orkut.. all results in the spreadsheet use 1 for twitter_J and 3000 for com-orkut
+testfiles = [("orkut","3000")]
+compression = [(".nibble"), (".byte"), (".byterle"), (".streamvec")]
+
+# below, you can change the range of number of processors; all of the current test results use 32 cores
+
+processors = [32]
+
+for testfile in testfiles :
+	for p in processors :
+		if p==1:
+			css = "export CILK_NWORKERS=1; ./decoderSpeed -s -c -rounds 5 "+dataDir+testfile[0]+compression[compression_num]
+		else:
+			css = "export CILK_NWORKERS="+`p`+"; numactl -i all ./decoderSpeed -s -c -rounds 5 "+' '+dataDir+testfile[0]+compression[compression_num]
+		print "decoderSpeed"+" "+`p`+" "+testfile[0]+" Ligra+"
+		print shellGetOutput(css)
+		sys.stdout.flush()
+
+for app in rapplications:
+  for testfile in testfiles :
+    for p in processors :
+      if p == 1:
+        css = "export CILK_NWORKERS=1; ./"+app+' -s -c -maxiters 1 -rounds 5 -r '+testfile[1]+' '+dataDir+testfile[0]+compression[compression_num]
+      else:
+        css = "export CILK_NWORKERS="+`p`+"; numactl -i all ./" + app + ' -s -rounds 5 -maxiters 1  -c -r '+testfile[1]+ ' ' + dataDir + testfile[0]+ compression[compression_num]
+      print app+" "+`p` + " " + testfile[0] + " Ligra+" 
+      print shellGetOutput(css)
+      sys.stdout.flush()
+
+for app in applications:
+  for testfile in testfiles :
+    for p in processors :
+      if p == 1:
+        css = "export CILK_NWORKERS=1; ./"+app+' -s -c -r -rounds 5 '+testfile[1]+' '+dataDir+testfile[0]+compression[compression_num]
+      else:
+        css = "export CILK_NWORKERS="+`p`+"; numactl -i all ./" + app + ' -s -rounds 5 -c -r '+testfile[1]+ ' ' + dataDir + testfile[0]+ compression[compression_num]
+      print app+" "+`p` + " " + testfile[0] + " Ligra+" 
+      print shellGetOutput(css)
+      sys.stdout.flush()
