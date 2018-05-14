@@ -1,0 +1,62 @@
+BC FOR 144 PROCESSORS WITH BYTERLE
+size = 165669905
+n = 4036538 m = 69362378 totalSpace = 133377573
+reading file...
+creating graph...
+Running time : 0.0989
+Running time : 0.101
+Running time : 0.0894
+Running time : 0.0869
+Running time : 0.0911
+
+BC FOR 144 PROCESSORS WITH BYTE
+size = 152057666
+n = 4036538 m = 69362378 totalSpace = 119765334
+reading file...
+creating graph...
+Running time : 0.0942
+Running time : 0.114
+Running time : 0.109
+Running time : 0.102
+Running time : 0.0883
+
+BC FOR 144 PROCESSORS WITH NIBBLE
+size = 143191482
+n = 4036538 m = 69362378 totalSpace = 110899150
+reading file...
+creating graph...
+Running time : 0.16
+Running time : 0.162
+Running time : 0.168
+Running time : 0.147
+Running time : 0.141
+
+BC FOR 144 PROCESSORS WITH STREAMVEC
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.11
+Running time : 0.109
+Running time : 0.148
+Running time : 0.174
+Running time : 0.168
+
+BC FOR 144 PROCESSORS WITH STREAMVBYTE
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.132
+Running time : 0.139
+Running time : 0.127
+Running time : 0.1
+Running time : 0.145
+
+BC FOR 144 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.0638
+Running time : 0.0624
+Running time : 0.0671
+Running time : 0.0581
+Running time : 0.0643
+

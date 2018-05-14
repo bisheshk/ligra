@@ -1,0 +1,62 @@
+BFS FOR 144 PROCESSORS WITH BYTERLE
+size = 466272435
+n = 3072627 m = 234370166 totalSpace = 441691391
+reading file...
+creating graph...
+Running time : 0.0508
+Running time : 0.0577
+Running time : 0.0523
+Running time : 0.05
+Running time : 0.0438
+
+BFS FOR 144 PROCESSORS WITH BYTE
+size = 440294232
+n = 3072627 m = 234370166 totalSpace = 415713188
+reading file...
+creating graph...
+Running time : 0.0688
+Running time : 0.052
+Running time : 0.051
+Running time : 0.0464
+Running time : 0.0489
+
+BFS FOR 144 PROCESSORS WITH NIBBLE
+size = 420669061
+n = 3072627 m = 234370166 totalSpace = 396088017
+reading file...
+creating graph...
+Running time : 0.0923
+Running time : 0.0742
+Running time : 0.0895
+Running time : 0.0939
+Running time : 0.0756
+
+BFS FOR 144 PROCESSORS WITH STREAMVEC
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.0475
+Running time : 0.0634
+Running time : 0.057
+Running time : 0.0543
+Running time : 0.0504
+
+BFS FOR 144 PROCESSORS WITH STREAMVBYTE
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.0473
+Running time : 0.0474
+Running time : 0.0415
+Running time : 0.0442
+Running time : 0.0463
+
+BFS FOR 144 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.0409
+Running time : 0.0455
+Running time : 0.0506
+Running time : 0.0323
+Running time : 0.0496
+

@@ -1,0 +1,19 @@
+USING COMPRESSION SCHEME BYTERLE
+reading file...
+m = 1468365182
+new m = 1468364884
+compressing out edges...
+parallel compressing, (n,m) = (41652231,1468364884)
+total space requested is : 4391902936
+Average bits per edge: 23.9281
+finished compressing, bytes used = 4391902936
+would have been, 11746919072
+writing out edges...
+compressing in edges...
+parallel compressing, (n,m) = (41652231,1468364884)
+total space requested is : 4340151211
+Average bits per edge: 23.6462
+finished compressing, bytes used = 4340151211
+would have been, 11746919072
+writing in edges...
+

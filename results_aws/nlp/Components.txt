@@ -1,0 +1,62 @@
+COMPONENTS FOR 144 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+Running time : 0.399
+Running time : 0.404
+Running time : 0.4
+Running time : 0.437
+Running time : 0.464
+
+COMPONENTS FOR 144 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+Running time : 0.465
+Running time : 0.437
+Running time : 0.428
+Running time : 0.465
+Running time : 0.47
+
+COMPONENTS FOR 144 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+Running time : 0.76
+Running time : 0.748
+Running time : 0.79
+Running time : 0.756
+Running time : 0.878
+
+COMPONENTS FOR 144 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.434
+Running time : 0.445
+Running time : 0.496
+Running time : 0.439
+Running time : 0.44
+
+COMPONENTS FOR 144 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.473
+Running time : 0.433
+Running time : 0.425
+Running time : 0.443
+Running time : 0.442
+
+COMPONENTS FOR 144 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.355
+Running time : 0.376
+Running time : 0.372
+Running time : 0.375
+Running time : 0.341
+

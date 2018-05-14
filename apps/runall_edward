@@ -12,12 +12,15 @@ resultsDir = "../results/"
 applications = ["decoderSpeed", "PageRank", "BFS","BC","Radii","Components"]
 applications_weighted = ["BellmanFord"]
 
-# testfiles = [("orkut", "3000"), ("twitter", "1"), ("nlp", "1"), ("livejournal", "400000")]
+# testfiles = [("orkut", "3000"), ("twitter", "300000"), ("nlp", "300000"), ("livejournal", "400000")]
 # testfiles_weighted = [("orkut_weighted", "1"), ("twitter_weighted", "1"), ("nlp_weighted", "1"), ("livejournal_weighted", "1")]
-testfiles = [("orkut", "3000"), ("livejournal", "400000")]
-testfiles_weighted = [("orkut_weighted", "1"), ("livejournal_weighted", "1")]
+testfiles = [("orkut", "3000"), ("nlp", "300000"), ("livejournal", "400000")]
+testfiles_weighted = [("orkut_weighted", "1"), ("nlp_weighted", "1"), ("livejournal_weighted", "1")]
+# testfiles = [("twitter", "300000")]
+# testfiles_weighted = [("twitter_weighted", "1")]
+testfiles_weighted = []
 
-processors = [32]
+processors = [144]
 
 def signal_handler(signal,frame):
   print "bye\n"
@@ -33,14 +36,15 @@ def shellGetOutput(command):
       raise NameError(command+"\n"+output+err)
   return output
 
-def makedirs():
+def makeclean():
   # also delete any results in the directories
   for testfile in testfiles + testfiles_weighted:
     path = resultsDir + testfile[0]
     if not os.path.exists(path):
       os.makedirs(path)
-    for f in glob.glob(path + "/[^e]*"):
-      os.remove(f)
+    for f in glob.glob(path + "/*"):
+      if "encoding" not in f:
+        os.remove(f)
 
 def make(compression):
   css = "make clean; make CILK=1 {}=1 -j".format(compression.upper())
@@ -74,7 +78,7 @@ def test_code(files, apps, compression):
         parallel = "numactl -i all" if p > 1 else ""
         flags = " -s" if "twitter" not in testfile[0] else ""
         flags += " -c" if compression != "uncompressed" else ""
-        flags += " -maxiters 10" if app == "PageRank" else ""
+        flags += " -maxiters 1" if app == "PageRank" else ""
         flags += " -r {}".format(testfile[1])
         file_path = dataDir + testfile[0] + "/" + new_compression
 
@@ -89,11 +93,12 @@ def test_code(files, apps, compression):
           f.write("\n")
 
 if __name__ == '__main__':
-  makedirs()
+  makeclean()
   for compression in ["byterle", "byte", "nibble", "streamvec", "streamvbyte", "uncompressed"]:
     if compression != "uncompressed":
       make(compression)
-    if compression != "streamvbyte" and compression != "uncompressed":
+    if compression not in ["streamvbyte", "uncompressed"]:
       encode(compression)
     test_code(testfiles, applications, compression)
-    test_code(testfiles_weighted, applications_weighted, compression)
+    if compression not in ["streamvec", "streamvbyte"]:
+      test_code(testfiles_weighted, applications_weighted, compression)

@@ -1,0 +1,62 @@
+RADII FOR 144 PROCESSORS WITH BYTERLE
+size = 165669905
+n = 4036538 m = 69362378 totalSpace = 133377573
+reading file...
+creating graph...
+Running time : 0.246
+Running time : 0.274
+Running time : 0.275
+Running time : 0.257
+Running time : 0.278
+
+RADII FOR 144 PROCESSORS WITH BYTE
+size = 152057666
+n = 4036538 m = 69362378 totalSpace = 119765334
+reading file...
+creating graph...
+Running time : 0.281
+Running time : 0.244
+Running time : 0.267
+Running time : 0.245
+Running time : 0.244
+
+RADII FOR 144 PROCESSORS WITH NIBBLE
+size = 143191482
+n = 4036538 m = 69362378 totalSpace = 110899150
+reading file...
+creating graph...
+Running time : 0.342
+Running time : 0.316
+Running time : 0.341
+Running time : 0.325
+Running time : 0.336
+
+RADII FOR 144 PROCESSORS WITH STREAMVEC
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.296
+Running time : 0.279
+Running time : 0.304
+Running time : 0.257
+Running time : 0.293
+
+RADII FOR 144 PROCESSORS WITH STREAMVBYTE
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.352
+Running time : 0.319
+Running time : 0.33
+Running time : 0.302
+Running time : 0.303
+
+RADII FOR 144 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.207
+Running time : 0.249
+Running time : 0.195
+Running time : 0.21
+Running time : 0.206
+

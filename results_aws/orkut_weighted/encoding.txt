@@ -1,0 +1,40 @@
+USING COMPRESSION SCHEME BYTERLE
+reading file...
+m = 234370166
+new m = 234370166
+parallel compressing, (n,m) = (3072627,234370166)
+total space requested is : 676888337
+Average bits per edge: 23.1049
+finished compressing, bytes used = 676888337
+would have been, 1874961328
+
+USING COMPRESSION SCHEME BYTE
+reading file...
+m = 234370166
+new m = 234370166
+parallel compressing, (n,m) = (3072627,234370166)
+total space requested is : 650083354
+Average bits per edge: 22.19
+finished compressing, bytes used = 650083354
+would have been, 1874961328
+
+USING COMPRESSION SCHEME NIBBLE
+reading file...
+m = 234370166
+new m = 234370166
+parallel compressing, (n,m) = (3072627,234370166)
+total space requested is : 614472282
+Average bits per edge: 20.9744
+finished compressing, bytes used = 614472282
+would have been, 1874961328
+
+USING COMPRESSION SCHEME STREAMVEC
+reading file...
+m = 234370166
+new m = 234370166
+parallel compressing, (n,m) = (3072627,234370166)
+total space requested is : 731342311
+Average bits per edge: 24.9637
+finished compressing, bytes used = 731342311
+would have been, 1874961328
+

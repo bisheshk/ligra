@@ -1,0 +1,40 @@
+BELLMANFORD FOR 144 PROCESSORS WITH BYTERLE
+size = 701469381
+n = 3072627 m = 234370166 totalSpace = 676888337
+reading file...
+creating graph...
+Running time : 0.00184
+Running time : 0.00362
+Running time : 0.000554
+Running time : 0.00856
+Running time : 0.000357
+
+BELLMANFORD FOR 144 PROCESSORS WITH BYTE
+size = 674664398
+n = 3072627 m = 234370166 totalSpace = 650083354
+reading file...
+creating graph...
+Running time : 0.000618
+Running time : 0.000457
+Running time : 0.0086
+Running time : 0.0029
+Running time : 0.00552
+
+BELLMANFORD FOR 144 PROCESSORS WITH NIBBLE
+size = 639053326
+n = 3072627 m = 234370166 totalSpace = 614472282
+reading file...
+creating graph...
+Running time : 0.00179
+Running time : 0.0067
+Running time : 0.000519
+Running time : 0.000556
+Running time : 0.00033
+
+BELLMANFORD FOR 144 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.000366
+Running time : 0.000399
+Running time : 0.000318
+Running time : 0.000381
+Running time : 0.000323
+
