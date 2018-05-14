@@ -1,0 +1,124 @@
+RADII FOR 32 PROCESSORS WITH BYTERLE
+size = 466272435
+n = 3072627 m = 234370166 totalSpace = 441691391
+reading file...
+creating graph...
+Running time : 0.787
+Running time : 0.779
+Running time : 0.763
+Running time : 0.774
+Running time : 0.766
+
+RADII FOR 32 PROCESSORS WITH BYTE
+size = 440294232
+n = 3072627 m = 234370166 totalSpace = 415713188
+reading file...
+creating graph...
+Running time : 0.645
+Running time : 0.644
+Running time : 0.631
+Running time : 0.649
+Running time : 0.645
+
+RADII FOR 32 PROCESSORS WITH NIBBLE
+size = 420669061
+n = 3072627 m = 234370166 totalSpace = 396088017
+reading file...
+creating graph...
+Running time : 1.34
+Running time : 1.31
+Running time : 1.33
+Running time : 1.31
+Running time : 1.32
+
+RADII FOR 32 PROCESSORS WITH STREAMVEC
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.692
+Running time : 0.698
+Running time : 0.701
+Running time : 0.696
+Running time : 0.691
+
+RADII FOR 32 PROCESSORS WITH STREAMVBYTE
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.639
+Running time : 0.647
+Running time : 0.631
+Running time : 0.641
+Running time : 0.64
+
+RADII FOR 32 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.483
+Running time : 0.497
+Running time : 0.476
+Running time : 0.5
+Running time : 0.496
+
+RADII FOR 32 PROCESSORS WITH BYTERLE
+size = 466272435
+n = 3072627 m = 234370166 totalSpace = 441691391
+reading file...
+creating graph...
+Running time : 0.75
+Running time : 0.721
+Running time : 0.74
+Running time : 0.721
+Running time : 0.732
+
+RADII FOR 32 PROCESSORS WITH BYTE
+size = 440294232
+n = 3072627 m = 234370166 totalSpace = 415713188
+reading file...
+creating graph...
+Running time : 0.63
+Running time : 0.616
+Running time : 0.631
+Running time : 0.624
+Running time : 0.615
+
+RADII FOR 32 PROCESSORS WITH NIBBLE
+size = 420669061
+n = 3072627 m = 234370166 totalSpace = 396088017
+reading file...
+creating graph...
+Running time : 1.34
+Running time : 1.32
+Running time : 1.33
+Running time : 1.32
+Running time : 1.31
+
+RADII FOR 32 PROCESSORS WITH STREAMVEC
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.682
+Running time : 0.694
+Running time : 0.684
+Running time : 0.681
+Running time : 0.679
+
+RADII FOR 32 PROCESSORS WITH STREAMVBYTE
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.621
+Running time : 0.624
+Running time : 0.627
+Running time : 0.614
+Running time : 0.618
+
+RADII FOR 32 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.454
+Running time : 0.445
+Running time : 0.456
+Running time : 0.45
+Running time : 0.45
+

@@ -1,0 +1,124 @@
+BELLMANFORD FOR 32 PROCESSORS WITH BYTERLE
+size = 235209043
+n = 4036538 m = 69362378 totalSpace = 202916711
+reading file...
+creating graph...
+Running time : 0.00187
+Running time : 0.000971
+Running time : 0.000665
+Running time : 0.000679
+Running time : 0.000715
+
+BELLMANFORD FOR 32 PROCESSORS WITH BYTE
+size = 221420044
+n = 4036538 m = 69362378 totalSpace = 189127712
+reading file...
+creating graph...
+Running time : 0.00158
+Running time : 0.000973
+Running time : 0.000858
+Running time : 0.000803
+Running time : 0.000661
+
+BELLMANFORD FOR 32 PROCESSORS WITH NIBBLE
+size = 207811511
+n = 4036538 m = 69362378 totalSpace = 175519179
+reading file...
+creating graph...
+Running time : 0.00154
+Running time : 0.00092
+Running time : 0.000803
+Running time : 0.000616
+Running time : 0.000638
+
+BELLMANFORD FOR 32 PROCESSORS WITH STREAMVEC
+size = 248646217
+n = 4036538 m = 69362378 totalSpace = 216353885
+reading file...
+creating graph...
+Running time : 0.00159
+Running time : 0.00294
+Running time : 0.000806
+Running time : 0.000771
+Running time : 0.000801
+
+BELLMANFORD FOR 32 PROCESSORS WITH STREAMVBYTE
+size = 248646217
+n = 4036538 m = 69362378 totalSpace = 216353885
+reading file...
+creating graph...
+Running time : 0.00438
+Running time : 0.00148
+Running time : 0.00117
+Running time : 0.00115
+Running time : 0.00109
+
+BELLMANFORD FOR 32 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.000965
+Running time : 0.000863
+Running time : 0.000604
+Running time : 0.000579
+Running time : 0.000655
+
+BELLMANFORD FOR 32 PROCESSORS WITH BYTERLE
+size = 235209043
+n = 4036538 m = 69362378 totalSpace = 202916711
+reading file...
+creating graph...
+Running time : 0.00127
+Running time : 0.00273
+Running time : 0.00122
+Running time : 0.000693
+Running time : 0.00064
+
+BELLMANFORD FOR 32 PROCESSORS WITH BYTE
+size = 221420044
+n = 4036538 m = 69362378 totalSpace = 189127712
+reading file...
+creating graph...
+Running time : 0.00127
+Running time : 0.000802
+Running time : 0.000681
+Running time : 0.000665
+Running time : 0.000616
+
+BELLMANFORD FOR 32 PROCESSORS WITH NIBBLE
+size = 207811511
+n = 4036538 m = 69362378 totalSpace = 175519179
+reading file...
+creating graph...
+Running time : 0.00149
+Running time : 0.000824
+Running time : 0.000673
+Running time : 0.000655
+Running time : 0.000634
+
+BELLMANFORD FOR 32 PROCESSORS WITH STREAMVEC
+size = 248646217
+n = 4036538 m = 69362378 totalSpace = 216353885
+reading file...
+creating graph...
+Running time : 0.00121
+Running time : 0.000718
+Running time : 0.000712
+Running time : 0.000782
+Running time : 0.00064
+
+BELLMANFORD FOR 32 PROCESSORS WITH STREAMVBYTE
+size = 248646217
+n = 4036538 m = 69362378 totalSpace = 216353885
+reading file...
+creating graph...
+Running time : 0.00249
+Running time : 0.00173
+Running time : 0.00673
+Running time : 0.00431
+Running time : 0.00246
+
+BELLMANFORD FOR 32 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.00067
+Running time : 0.000753
+Running time : 0.000549
+Running time : 0.000515
+Running time : 0.000552
+

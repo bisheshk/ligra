@@ -1,72 +1,99 @@
 #!/usr/bin/python
-#
-# run all tests
-#
 
 import os
 import sys
 import signal
 import time
 import subprocess
+import glob
 
-# nibble = 0, byte = 1, rle = 2, streamvec = 3, streamcase = 4, bitpacking = 5, varint-GB = 6 
-# change the compression number depending on the method
-compression_num = 3;	
+dataDir = "../inputs/"
+resultsDir = "../results/"
+applications = ["decoderSpeed", "PageRank", "BFS","BC","Radii","Components"]
+applications_weighted = ["BellmanFord"]
+
+# testfiles = [("orkut", "3000"), ("twitter", "1"), ("nlp", "1"), ("livejournal", "400000")]
+# testfiles_weighted = [("orkut_weighted", "1"), ("twitter_weighted", "1"), ("nlp_weighted", "1"), ("livejournal_weighted", "1")]
+testfiles = [("orkut", "3000"), ("livejournal", "400000")]
+testfiles_weighted = [("orkut_weighted", "1"), ("livejournal_weighted", "1")]
+
+processors = [32]
 
 def signal_handler(signal,frame):
   print "bye\n"
   sys.exit(0)
 signal.signal(signal.SIGINT,signal_handler)
 
-def shellGetOutput(str) :
-  process = subprocess.Popen(str,shell=True,stdout=subprocess.PIPE,
-                             stderr=subprocess.PIPE)
+def shellGetOutput(command):
+  print(command)
+  process = subprocess.Popen(command,shell=True,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
   output, err = process.communicate()
-  
+  print(output)
   if (len(err) > 0):
-      raise NameError(str+"\n"+output+err)
+      raise NameError(command+"\n"+output+err)
   return output
 
-dataDir = "../inputs/"
-applications = ["BFS","BC","Radii","Components"]
-rapplications = ["PageRank"]
+def makedirs():
+  # also delete any results in the directories
+  for testfile in testfiles + testfiles_weighted:
+    path = resultsDir + testfile[0]
+    if not os.path.exists(path):
+      os.makedirs(path)
+    for f in glob.glob(path + "/[^e]*"):
+      os.remove(f)
 
-# this file tests twitter_J and com-orkut.. all results in the spreadsheet use 1 for twitter_J and 3000 for com-orkut
-testfiles = [("orkut","3000")]
-compression = [(".nibble"), (".byte"), (".byterle"), (".streamvec")]
+def make(compression):
+  css = "make clean; make CILK=1 {}=1 -j".format(compression.upper())
+  shellGetOutput(css)
+  sys.stdout.flush()
 
-# below, you can change the range of number of processors; all of the current test results use 32 cores
+def encode(compression):
+  # don't bother encoding if it's already there
+  for testfile in testfiles + testfiles_weighted:
+    path = dataDir + testfile[0] + "/"
+    if os.path.isfile(path + compression):
+      continue
+    flags = " -w" if "weighted" in testfile[0] else ""
+    flags += " -s" if "twitter" not in testfile[0] else ""
 
-processors = [32]
+    css = "./encoder{} {} {}".format(flags, path + "uncompressed", path + compression)
+    output = shellGetOutput(css)
+    sys.stdout.flush()
 
-for testfile in testfiles :
-	for p in processors :
-		if p==1:
-			css = "export CILK_NWORKERS=1; ./decoderSpeed -s -c -rounds 5 "+dataDir+testfile[0]+compression[compression_num]
-		else:
-			css = "export CILK_NWORKERS="+`p`+"; numactl -i all ./decoderSpeed -s -c -rounds 5 "+' '+dataDir+testfile[0]+compression[compression_num]
-		print "decoderSpeed"+" "+`p`+" "+testfile[0]+" Ligra+"
-		print shellGetOutput(css)
-		sys.stdout.flush()
+    results_path = resultsDir + testfile[0] + "/encoding.txt"
+    with open(results_path, "a" if os.path.exists(results_path) else "w") as f:
+      f.write("Using compression scheme {}\n".format(compression).upper())
+      f.write(output)
+      f.write("\n")
 
-for app in rapplications:
-  for testfile in testfiles :
-    for p in processors :
-      if p == 1:
-        css = "export CILK_NWORKERS=1; ./"+app+' -s -c -maxiters 1 -rounds 5 -r '+testfile[1]+' '+dataDir+testfile[0]+compression[compression_num]
-      else:
-        css = "export CILK_NWORKERS="+`p`+"; numactl -i all ./" + app + ' -s -rounds 5 -maxiters 1  -c -r '+testfile[1]+ ' ' + dataDir + testfile[0]+ compression[compression_num]
-      print app+" "+`p` + " " + testfile[0] + " Ligra+" 
-      print shellGetOutput(css)
-      sys.stdout.flush()
+def test_code(files, apps, compression):
+  new_compression = "streamvec" if compression == "streamvbyte" else compression # they share the same encoding
+  for app in apps:
+    for testfile in files:
+      for p in processors:
+        parallel = "numactl -i all" if p > 1 else ""
+        flags = " -s" if "twitter" not in testfile[0] else ""
+        flags += " -c" if compression != "uncompressed" else ""
+        flags += " -maxiters 10" if app == "PageRank" else ""
+        flags += " -r {}".format(testfile[1])
+        file_path = dataDir + testfile[0] + "/" + new_compression
 
-for app in applications:
-  for testfile in testfiles :
-    for p in processors :
-      if p == 1:
-        css = "export CILK_NWORKERS=1; ./"+app+' -s -c -r -rounds 5 '+testfile[1]+' '+dataDir+testfile[0]+compression[compression_num]
-      else:
-        css = "export CILK_NWORKERS="+`p`+"; numactl -i all ./" + app + ' -s -rounds 5 -c -r '+testfile[1]+ ' ' + dataDir + testfile[0]+ compression[compression_num]
-      print app+" "+`p` + " " + testfile[0] + " Ligra+" 
-      print shellGetOutput(css)
-      sys.stdout.flush()
+        css = "export CILK_NWORKERS={}; {} ./{}{} -rounds 5 {}".format(p, parallel, app, flags, file_path)
+        output = shellGetOutput(css)
+        sys.stdout.flush() 
+
+        results_path = resultsDir + testfile[0] + "/" + app + ".txt"
+        with open(results_path, "a" if os.path.exists(results_path) else "w") as f:
+          f.write("{} for {} processors with {}\n".format(app, p, compression).upper())
+          f.write(output)
+          f.write("\n")
+
+if __name__ == '__main__':
+  makedirs()
+  for compression in ["byterle", "byte", "nibble", "streamvec", "streamvbyte", "uncompressed"]:
+    if compression != "uncompressed":
+      make(compression)
+    if compression != "streamvbyte" and compression != "uncompressed":
+      encode(compression)
+    test_code(testfiles, applications, compression)
+    test_code(testfiles_weighted, applications_weighted, compression)

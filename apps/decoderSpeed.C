@@ -120,7 +120,9 @@ int parallel_main(int argc, char* argv[]) {
     decodeGraph(G,edges,offsets);
     for(long i=0;i<rounds;i++) {
       t.start();
-      decodeGraph(G,edges,offsets);
+      for(long j=0;j<10;j++) {
+        decodeGraph(G,edges,offsets);
+      }
       t.reportTotal("decoding time");
     }
     cout << edges[rand() % G.m] << endl;
@@ -138,7 +140,9 @@ int parallel_main(int argc, char* argv[]) {
     copyGraph(G,edges,offsets);
     for(long i=0;i<rounds;i++) {
       t.start();
-      copyGraph(G,edges,offsets);
+      for(long j=0;j<10;j++) {
+        copyGraph(G,edges,offsets);
+      }
       t.reportTotal("decoding time");
     }
     cout << edges[rand() % G.m] << endl;

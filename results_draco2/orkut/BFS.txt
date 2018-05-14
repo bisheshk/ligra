@@ -1,0 +1,124 @@
+BFS FOR 32 PROCESSORS WITH BYTERLE
+size = 466272435
+n = 3072627 m = 234370166 totalSpace = 441691391
+reading file...
+creating graph...
+Running time : 0.0773
+Running time : 0.0726
+Running time : 0.0725
+Running time : 0.0722
+Running time : 0.0723
+
+BFS FOR 32 PROCESSORS WITH BYTE
+size = 440294232
+n = 3072627 m = 234370166 totalSpace = 415713188
+reading file...
+creating graph...
+Running time : 0.0796
+Running time : 0.0754
+Running time : 0.0738
+Running time : 0.0737
+Running time : 0.0737
+
+BFS FOR 32 PROCESSORS WITH NIBBLE
+size = 420669061
+n = 3072627 m = 234370166 totalSpace = 396088017
+reading file...
+creating graph...
+Running time : 0.172
+Running time : 0.172
+Running time : 0.172
+Running time : 0.172
+Running time : 0.172
+
+BFS FOR 32 PROCESSORS WITH STREAMVEC
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.074
+Running time : 0.0737
+Running time : 0.0739
+Running time : 0.0739
+Running time : 0.074
+
+BFS FOR 32 PROCESSORS WITH STREAMVBYTE
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.0738
+Running time : 0.0685
+Running time : 0.0684
+Running time : 0.0685
+Running time : 0.0682
+
+BFS FOR 32 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.0554
+Running time : 0.0553
+Running time : 0.0552
+Running time : 0.0552
+Running time : 0.0552
+
+BFS FOR 32 PROCESSORS WITH BYTERLE
+size = 466272435
+n = 3072627 m = 234370166 totalSpace = 441691391
+reading file...
+creating graph...
+Running time : 0.07
+Running time : 0.0671
+Running time : 0.0672
+Running time : 0.0672
+Running time : 0.0668
+
+BFS FOR 32 PROCESSORS WITH BYTE
+size = 440294232
+n = 3072627 m = 234370166 totalSpace = 415713188
+reading file...
+creating graph...
+Running time : 0.0681
+Running time : 0.0683
+Running time : 0.0681
+Running time : 0.0683
+Running time : 0.0684
+
+BFS FOR 32 PROCESSORS WITH NIBBLE
+size = 420669061
+n = 3072627 m = 234370166 totalSpace = 396088017
+reading file...
+creating graph...
+Running time : 0.172
+Running time : 0.172
+Running time : 0.172
+Running time : 0.172
+Running time : 0.172
+
+BFS FOR 32 PROCESSORS WITH STREAMVEC
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.0708
+Running time : 0.0711
+Running time : 0.0709
+Running time : 0.0711
+Running time : 0.0711
+
+BFS FOR 32 PROCESSORS WITH STREAMVBYTE
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.0667
+Running time : 0.0656
+Running time : 0.0683
+Running time : 0.0649
+Running time : 0.0656
+
+BFS FOR 32 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.0431
+Running time : 0.0434
+Running time : 0.0432
+Running time : 0.0437
+Running time : 0.0435
+

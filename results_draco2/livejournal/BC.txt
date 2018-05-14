@@ -1,0 +1,124 @@
+BC FOR 32 PROCESSORS WITH BYTERLE
+size = 165669905
+n = 4036538 m = 69362378 totalSpace = 133377573
+reading file...
+creating graph...
+Running time : 0.164
+Running time : 0.166
+Running time : 0.157
+Running time : 0.166
+Running time : 0.168
+
+BC FOR 32 PROCESSORS WITH BYTE
+size = 152057666
+n = 4036538 m = 69362378 totalSpace = 119765334
+reading file...
+creating graph...
+Running time : 0.147
+Running time : 0.146
+Running time : 0.146
+Running time : 0.148
+Running time : 0.145
+
+BC FOR 32 PROCESSORS WITH NIBBLE
+size = 143191482
+n = 4036538 m = 69362378 totalSpace = 110899150
+reading file...
+creating graph...
+Running time : 0.248
+Running time : 0.247
+Running time : 0.245
+Running time : 0.246
+Running time : 0.245
+
+BC FOR 32 PROCESSORS WITH STREAMVEC
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.148
+Running time : 0.15
+Running time : 0.147
+Running time : 0.149
+Running time : 0.149
+
+BC FOR 32 PROCESSORS WITH STREAMVBYTE
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.151
+Running time : 0.152
+Running time : 0.152
+Running time : 0.154
+Running time : 0.152
+
+BC FOR 32 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.119
+Running time : 0.119
+Running time : 0.119
+Running time : 0.119
+Running time : 0.119
+
+BC FOR 32 PROCESSORS WITH BYTERLE
+size = 165669905
+n = 4036538 m = 69362378 totalSpace = 133377573
+reading file...
+creating graph...
+Running time : 0.134
+Running time : 0.135
+Running time : 0.136
+Running time : 0.134
+Running time : 0.134
+
+BC FOR 32 PROCESSORS WITH BYTE
+size = 152057666
+n = 4036538 m = 69362378 totalSpace = 119765334
+reading file...
+creating graph...
+Running time : 0.128
+Running time : 0.128
+Running time : 0.128
+Running time : 0.127
+Running time : 0.128
+
+BC FOR 32 PROCESSORS WITH NIBBLE
+size = 143191482
+n = 4036538 m = 69362378 totalSpace = 110899150
+reading file...
+creating graph...
+Running time : 0.232
+Running time : 0.231
+Running time : 0.231
+Running time : 0.228
+Running time : 0.229
+
+BC FOR 32 PROCESSORS WITH STREAMVEC
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.131
+Running time : 0.13
+Running time : 0.13
+Running time : 0.133
+Running time : 0.132
+
+BC FOR 32 PROCESSORS WITH STREAMVBYTE
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.135
+Running time : 0.137
+Running time : 0.135
+Running time : 0.136
+Running time : 0.136
+
+BC FOR 32 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.092
+Running time : 0.0921
+Running time : 0.093
+Running time : 0.0928
+Running time : 0.0927
+

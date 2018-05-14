@@ -1,0 +1,124 @@
+COMPONENTS FOR 32 PROCESSORS WITH BYTERLE
+size = 466272435
+n = 3072627 m = 234370166 totalSpace = 441691391
+reading file...
+creating graph...
+Running time : 0.174
+Running time : 0.175
+Running time : 0.174
+Running time : 0.175
+Running time : 0.174
+
+COMPONENTS FOR 32 PROCESSORS WITH BYTE
+size = 440294232
+n = 3072627 m = 234370166 totalSpace = 415713188
+reading file...
+creating graph...
+Running time : 0.178
+Running time : 0.18
+Running time : 0.178
+Running time : 0.178
+Running time : 0.178
+
+COMPONENTS FOR 32 PROCESSORS WITH NIBBLE
+size = 420669061
+n = 3072627 m = 234370166 totalSpace = 396088017
+reading file...
+creating graph...
+Running time : 0.455
+Running time : 0.447
+Running time : 0.448
+Running time : 0.45
+Running time : 0.453
+
+COMPONENTS FOR 32 PROCESSORS WITH STREAMVEC
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.184
+Running time : 0.185
+Running time : 0.186
+Running time : 0.185
+Running time : 0.187
+
+COMPONENTS FOR 32 PROCESSORS WITH STREAMVBYTE
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.18
+Running time : 0.181
+Running time : 0.178
+Running time : 0.178
+Running time : 0.179
+
+COMPONENTS FOR 32 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.138
+Running time : 0.139
+Running time : 0.139
+Running time : 0.138
+Running time : 0.139
+
+COMPONENTS FOR 32 PROCESSORS WITH BYTERLE
+size = 466272435
+n = 3072627 m = 234370166 totalSpace = 441691391
+reading file...
+creating graph...
+Running time : 0.163
+Running time : 0.161
+Running time : 0.161
+Running time : 0.16
+Running time : 0.16
+
+COMPONENTS FOR 32 PROCESSORS WITH BYTE
+size = 440294232
+n = 3072627 m = 234370166 totalSpace = 415713188
+reading file...
+creating graph...
+Running time : 0.169
+Running time : 0.169
+Running time : 0.169
+Running time : 0.169
+Running time : 0.169
+
+COMPONENTS FOR 32 PROCESSORS WITH NIBBLE
+size = 420669061
+n = 3072627 m = 234370166 totalSpace = 396088017
+reading file...
+creating graph...
+Running time : 0.436
+Running time : 0.441
+Running time : 0.437
+Running time : 0.435
+Running time : 0.44
+
+COMPONENTS FOR 32 PROCESSORS WITH STREAMVEC
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.173
+Running time : 0.173
+Running time : 0.175
+Running time : 0.174
+Running time : 0.176
+
+COMPONENTS FOR 32 PROCESSORS WITH STREAMVBYTE
+size = 463357268
+n = 3072627 m = 234370166 totalSpace = 438776224
+reading file...
+creating graph...
+Running time : 0.167
+Running time : 0.17
+Running time : 0.168
+Running time : 0.167
+Running time : 0.168
+
+COMPONENTS FOR 32 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.128
+Running time : 0.127
+Running time : 0.127
+Running time : 0.127
+Running time : 0.128
+
