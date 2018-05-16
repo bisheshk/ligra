@@ -1,0 +1,204 @@
+DECODERSPEED FOR 192 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+decoding time : 0.647
+decoding time : 0.645
+decoding time : 0.651
+decoding time : 0.666
+decoding time : 0.668
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+decoding time : 0.651
+decoding time : 0.663
+decoding time : 0.632
+decoding time : 0.632
+decoding time : 0.638
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+decoding time : 0.967
+decoding time : 0.92
+decoding time : 0.924
+decoding time : 0.917
+decoding time : 0.937
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+decoding time : 0.71
+decoding time : 0.684
+decoding time : 0.669
+decoding time : 0.654
+decoding time : 0.652
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+decoding time : 0.681
+decoding time : 0.674
+decoding time : 0.652
+decoding time : 0.651
+decoding time : 0.674
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH UNCOMPRESSED
+decoding time : 0.753
+decoding time : 0.764
+decoding time : 0.788
+decoding time : 0.777
+decoding time : 0.768
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+decoding time : 0.701
+decoding time : 0.681
+decoding time : 0.662
+decoding time : 0.611
+decoding time : 0.633
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+decoding time : 0.665
+decoding time : 0.658
+decoding time : 0.638
+decoding time : 0.659
+decoding time : 0.638
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+decoding time : 0.891
+decoding time : 0.915
+decoding time : 0.885
+decoding time : 0.907
+decoding time : 0.901
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+decoding time : 0.672
+decoding time : 0.68
+decoding time : 0.671
+decoding time : 0.652
+decoding time : 0.65
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+decoding time : 0.676
+decoding time : 0.656
+decoding time : 0.67
+decoding time : 0.66
+decoding time : 0.633
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH UNCOMPRESSED
+decoding time : 0.784
+decoding time : 0.763
+decoding time : 0.79
+decoding time : 0.768
+decoding time : 0.766
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+decoding time : 0.63
+decoding time : 0.658
+decoding time : 0.65
+decoding time : 0.657
+decoding time : 0.671
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+decoding time : 0.645
+decoding time : 0.69
+decoding time : 0.66
+decoding time : 0.673
+decoding time : 0.657
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+decoding time : 0.909
+decoding time : 0.904
+decoding time : 0.898
+decoding time : 0.906
+decoding time : 0.933
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+decoding time : 0.623
+decoding time : 0.671
+decoding time : 0.639
+decoding time : 0.673
+decoding time : 0.653
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+decoding time : 0.693
+decoding time : 0.659
+decoding time : 0.625
+decoding time : 0.704
+decoding time : 0.641
+11822664
+
+DECODERSPEED FOR 192 PROCESSORS WITH UNCOMPRESSED
+decoding time : 0.775
+decoding time : 0.778
+decoding time : 0.796
+decoding time : 0.784
+decoding time : 0.768
+11822664
+

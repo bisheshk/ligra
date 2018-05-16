@@ -1,0 +1,186 @@
+PAGERANK FOR 192 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+Running time : 0.114
+Running time : 0.125
+Running time : 0.11
+Running time : 0.118
+Running time : 0.113
+
+PAGERANK FOR 192 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+Running time : 0.107
+Running time : 0.12
+Running time : 0.111
+Running time : 0.112
+Running time : 0.111
+
+PAGERANK FOR 192 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+Running time : 0.191
+Running time : 0.174
+Running time : 0.189
+Running time : 0.178
+Running time : 0.159
+
+PAGERANK FOR 192 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.144
+Running time : 0.111
+Running time : 0.106
+Running time : 0.112
+Running time : 0.115
+
+PAGERANK FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.138
+Running time : 0.123
+Running time : 0.113
+Running time : 0.125
+Running time : 0.164
+
+PAGERANK FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.086
+Running time : 0.0975
+Running time : 0.0986
+Running time : 0.0897
+Running time : 0.109
+
+PAGERANK FOR 192 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+Running time : 0.0955
+Running time : 0.107
+Running time : 0.112
+Running time : 0.12
+Running time : 0.103
+
+PAGERANK FOR 192 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+Running time : 0.119
+Running time : 0.132
+Running time : 0.123
+Running time : 0.12
+Running time : 0.118
+
+PAGERANK FOR 192 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+Running time : 0.166
+Running time : 0.175
+Running time : 0.155
+Running time : 0.158
+Running time : 0.164
+
+PAGERANK FOR 192 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.104
+Running time : 0.102
+Running time : 0.108
+Running time : 0.102
+Running time : 0.115
+
+PAGERANK FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.126
+Running time : 0.105
+Running time : 0.135
+Running time : 0.14
+Running time : 0.125
+
+PAGERANK FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.125
+Running time : 0.118
+Running time : 0.118
+Running time : 0.121
+Running time : 0.111
+
+PAGERANK FOR 192 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+Running time : 0.129
+Running time : 0.142
+Running time : 0.144
+Running time : 0.124
+Running time : 0.129
+
+PAGERANK FOR 192 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+Running time : 0.121
+Running time : 0.115
+Running time : 0.107
+Running time : 0.12
+Running time : 0.113
+
+PAGERANK FOR 192 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+Running time : 0.153
+Running time : 0.173
+Running time : 0.154
+Running time : 0.167
+Running time : 0.177
+
+PAGERANK FOR 192 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.135
+Running time : 0.122
+Running time : 0.121
+Running time : 0.11
+Running time : 0.122
+
+PAGERANK FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.111
+Running time : 0.124
+Running time : 0.117
+Running time : 0.106
+Running time : 0.108
+
+PAGERANK FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.0876
+Running time : 0.136
+Running time : 0.113
+Running time : 0.142
+Running time : 0.124
+

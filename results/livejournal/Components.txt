@@ -1,0 +1,186 @@
+COMPONENTS FOR 192 PROCESSORS WITH BYTERLE
+size = 165669905
+n = 4036538 m = 69362378 totalSpace = 133377573
+reading file...
+creating graph...
+Running time : 0.0438
+Running time : 0.0602
+Running time : 0.065
+Running time : 0.0443
+Running time : 0.0472
+
+COMPONENTS FOR 192 PROCESSORS WITH BYTE
+size = 152057666
+n = 4036538 m = 69362378 totalSpace = 119765334
+reading file...
+creating graph...
+Running time : 0.0373
+Running time : 0.0614
+Running time : 0.0577
+Running time : 0.0442
+Running time : 0.0567
+
+COMPONENTS FOR 192 PROCESSORS WITH NIBBLE
+size = 143191482
+n = 4036538 m = 69362378 totalSpace = 110899150
+reading file...
+creating graph...
+Running time : 0.113
+Running time : 0.115
+Running time : 0.117
+Running time : 0.0913
+Running time : 0.11
+
+COMPONENTS FOR 192 PROCESSORS WITH STREAMVEC
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.054
+Running time : 0.0697
+Running time : 0.0839
+Running time : 0.0678
+Running time : 0.0545
+
+COMPONENTS FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.0519
+Running time : 0.0407
+Running time : 0.0569
+Running time : 0.067
+Running time : 0.0685
+
+COMPONENTS FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.0342
+Running time : 0.0402
+Running time : 0.0362
+Running time : 0.0409
+Running time : 0.0611
+
+COMPONENTS FOR 192 PROCESSORS WITH BYTERLE
+size = 165669905
+n = 4036538 m = 69362378 totalSpace = 133377573
+reading file...
+creating graph...
+Running time : 0.0915
+Running time : 0.0519
+Running time : 0.0648
+Running time : 0.0668
+Running time : 0.074
+
+COMPONENTS FOR 192 PROCESSORS WITH BYTE
+size = 152057666
+n = 4036538 m = 69362378 totalSpace = 119765334
+reading file...
+creating graph...
+Running time : 0.0716
+Running time : 0.086
+Running time : 0.0892
+Running time : 0.074
+Running time : 0.0705
+
+COMPONENTS FOR 192 PROCESSORS WITH NIBBLE
+size = 143191482
+n = 4036538 m = 69362378 totalSpace = 110899150
+reading file...
+creating graph...
+Running time : 0.098
+Running time : 0.136
+Running time : 0.0935
+Running time : 0.11
+Running time : 0.106
+
+COMPONENTS FOR 192 PROCESSORS WITH STREAMVEC
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.0518
+Running time : 0.0646
+Running time : 0.0529
+Running time : 0.063
+Running time : 0.0542
+
+COMPONENTS FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.0521
+Running time : 0.0452
+Running time : 0.0485
+Running time : 0.0543
+Running time : 0.0536
+
+COMPONENTS FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.048
+Running time : 0.0425
+Running time : 0.0507
+Running time : 0.0484
+Running time : 0.0473
+
+COMPONENTS FOR 192 PROCESSORS WITH BYTERLE
+size = 165669905
+n = 4036538 m = 69362378 totalSpace = 133377573
+reading file...
+creating graph...
+Running time : 0.0422
+Running time : 0.0497
+Running time : 0.0752
+Running time : 0.12
+Running time : 0.0667
+
+COMPONENTS FOR 192 PROCESSORS WITH BYTE
+size = 152057666
+n = 4036538 m = 69362378 totalSpace = 119765334
+reading file...
+creating graph...
+Running time : 0.0879
+Running time : 0.0447
+Running time : 0.0872
+Running time : 0.0724
+Running time : 0.066
+
+COMPONENTS FOR 192 PROCESSORS WITH NIBBLE
+size = 143191482
+n = 4036538 m = 69362378 totalSpace = 110899150
+reading file...
+creating graph...
+Running time : 0.106
+Running time : 0.116
+Running time : 0.124
+Running time : 0.109
+Running time : 0.13
+
+COMPONENTS FOR 192 PROCESSORS WITH STREAMVEC
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.0584
+Running time : 0.0998
+Running time : 0.09
+Running time : 0.0792
+Running time : 0.0624
+
+COMPONENTS FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 0.0621
+Running time : 0.0492
+Running time : 0.0396
+Running time : 0.0368
+Running time : 0.0461
+
+COMPONENTS FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.0362
+Running time : 0.0331
+Running time : 0.0287
+Running time : 0.0298
+Running time : 0.046
+

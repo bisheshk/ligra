@@ -1,0 +1,186 @@
+BC FOR 192 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+Running time : 0.825
+Running time : 0.754
+Running time : 0.682
+Running time : 0.638
+Running time : 0.61
+
+BC FOR 192 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+Running time : 0.664
+Running time : 0.628
+Running time : 0.571
+Running time : 0.576
+Running time : 0.576
+
+BC FOR 192 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+Running time : 0.978
+Running time : 1.01
+Running time : 1.26
+Running time : 1.07
+Running time : 1.27
+
+BC FOR 192 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.773
+Running time : 0.802
+Running time : 1.02
+Running time : 0.762
+Running time : 1.01
+
+BC FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.685
+Running time : 0.607
+Running time : 0.633
+Running time : 0.634
+Running time : 0.646
+
+BC FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.82
+Running time : 0.865
+Running time : 0.749
+Running time : 0.917
+Running time : 0.908
+
+BC FOR 192 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+Running time : 0.986
+Running time : 0.867
+Running time : 0.972
+Running time : 1.08
+Running time : 0.841
+
+BC FOR 192 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+Running time : 0.989
+Running time : 0.991
+Running time : 0.806
+Running time : 0.644
+Running time : 0.614
+
+BC FOR 192 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+Running time : 0.981
+Running time : 0.82
+Running time : 0.952
+Running time : 1.17
+Running time : 0.809
+
+BC FOR 192 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.628
+Running time : 0.797
+Running time : 0.752
+Running time : 0.805
+Running time : 0.645
+
+BC FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.673
+Running time : 0.6
+Running time : 0.678
+Running time : 0.71
+Running time : 0.609
+
+BC FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.685
+Running time : 0.651
+Running time : 0.589
+Running time : 0.602
+Running time : 0.592
+
+BC FOR 192 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+Running time : 0.897
+Running time : 0.715
+Running time : 0.69
+Running time : 0.668
+Running time : 0.828
+
+BC FOR 192 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+Running time : 0.763
+Running time : 0.664
+Running time : 0.657
+Running time : 0.79
+Running time : 0.743
+
+BC FOR 192 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+Running time : 0.839
+Running time : 0.801
+Running time : 0.816
+Running time : 1.04
+Running time : 0.838
+
+BC FOR 192 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 0.656
+Running time : 0.701
+Running time : 0.617
+Running time : 0.62
+Running time : 0.612
+
+BC FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 1.19
+Running time : 1.12
+Running time : 0.69
+Running time : 0.682
+Running time : 0.641
+
+BC FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 0.65
+Running time : 0.614
+Running time : 0.61
+Running time : 0.621
+Running time : 0.595
+

@@ -1,0 +1,48 @@
+USING COMPRESSION SCHEME BYTERLE
+reading file...
+log gap cost = 7.9461
+log cost = 11.8415
+compressing...
+parallel compressing, (n,m) = (4036538,69362378)
+total space requested is : 133377573
+Average bits per edge: 15.3833
+finished compressing, bytes used = 133377573
+would have been, 277449512
+writing edges...
+
+USING COMPRESSION SCHEME BYTE
+reading file...
+log gap cost = 7.9461
+log cost = 11.8415
+compressing...
+parallel compressing, (n,m) = (4036538,69362378)
+total space requested is : 119765334
+Average bits per edge: 13.8133
+finished compressing, bytes used = 119765334
+would have been, 277449512
+writing edges...
+
+USING COMPRESSION SCHEME NIBBLE
+reading file...
+log gap cost = 7.9461
+log cost = 11.8415
+compressing...
+parallel compressing, (n,m) = (4036538,69362378)
+total space requested is : 110899150
+Average bits per edge: 12.7907
+finished compressing, bytes used = 110899150
+would have been, 277449512
+writing edges...
+
+USING COMPRESSION SCHEME STREAMVEC
+reading file...
+log gap cost = 7.9461
+log cost = 11.8415
+compressing...
+parallel compressing, (n,m) = (4036538,69362378)
+total space requested is: 130306019
+Average bits per edge: 15.029
+finished compressing, bytes used = 130306019
+would have been, 277449512
+writing edges...
+

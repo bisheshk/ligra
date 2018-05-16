@@ -1,0 +1,201 @@
+BFS FOR 192 PROCESSORS WITH BYTERLE
+size = 16161609173
+n = 133633041 m = 5475109924 totalSpace = 6873040330
+reading file...
+inTotalSpace = 6081375811
+creating graph...
+Running time : 2.9
+Running time : 2.88
+Running time : 2.85
+Running time : 2.92
+Running time : 2.97
+
+BFS FOR 192 PROCESSORS WITH BYTE
+size = 15499450677
+n = 133633041 m = 5475109924 totalSpace = 6447871367
+reading file...
+inTotalSpace = 5844386278
+creating graph...
+Running time : 2.92
+Running time : 2.98
+Running time : 3.05
+Running time : 3.08
+Running time : 2.97
+
+BFS FOR 192 PROCESSORS WITH NIBBLE
+size = 10927553539
+n = 133633041 m = 5475109924 totalSpace = 4300608930
+reading file...
+inTotalSpace = 3419751577
+creating graph...
+Running time : 3.42
+Running time : 3.28
+Running time : 3.31
+Running time : 3.21
+Running time : 3.23
+
+BFS FOR 192 PROCESSORS WITH STREAMVEC
+size = 18139509091
+n = 133633041 m = 5475109924 totalSpace = 7725243892
+reading file...
+inTotalSpace = 7207072167
+creating graph...
+Running time : 3.03
+Running time : 3.01
+Running time : 3.08
+Running time : 2.99
+Running time : 3.07
+
+BFS FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 18139509091
+n = 133633041 m = 5475109924 totalSpace = 7725243892
+reading file...
+inTotalSpace = 7207072167
+creating graph...
+Running time : 3.12
+Running time : 2.99
+Running time : 3.06
+Running time : 3.14
+Running time : 3.12
+
+BFS FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 3.09
+Running time : 3.2
+Running time : 3.19
+Running time : 3.13
+Running time : 3.11
+
+BFS FOR 192 PROCESSORS WITH BYTERLE
+size = 16161609173
+n = 133633041 m = 5475109924 totalSpace = 6873040330
+reading file...
+inTotalSpace = 6081375811
+creating graph...
+Running time : 2.82
+Running time : 3.01
+Running time : 2.99
+Running time : 2.9
+Running time : 2.93
+
+BFS FOR 192 PROCESSORS WITH BYTE
+size = 15499450677
+n = 133633041 m = 5475109924 totalSpace = 6447871367
+reading file...
+inTotalSpace = 5844386278
+creating graph...
+Running time : 3.07
+Running time : 3
+Running time : 3.13
+Running time : 2.97
+Running time : 3.04
+
+BFS FOR 192 PROCESSORS WITH NIBBLE
+size = 10927553539
+n = 133633041 m = 5475109924 totalSpace = 4300608930
+reading file...
+inTotalSpace = 3419751577
+creating graph...
+Running time : 3.43
+Running time : 3.29
+Running time : 3.22
+Running time : 3.23
+Running time : 3.22
+
+BFS FOR 192 PROCESSORS WITH STREAMVEC
+size = 18139509091
+n = 133633041 m = 5475109924 totalSpace = 7725243892
+reading file...
+inTotalSpace = 7207072167
+creating graph...
+Running time : 3.09
+Running time : 3.04
+Running time : 3
+Running time : 3.22
+Running time : 2.94
+
+BFS FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 18139509091
+n = 133633041 m = 5475109924 totalSpace = 7725243892
+reading file...
+inTotalSpace = 7207072167
+creating graph...
+Running time : 3.05
+Running time : 3.13
+Running time : 3.1
+Running time : 3.1
+Running time : 3.08
+
+BFS FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 3.14
+Running time : 3.06
+Running time : 3.08
+Running time : 3.14
+Running time : 3.06
+
+BFS FOR 192 PROCESSORS WITH BYTERLE
+size = 16161609173
+n = 133633041 m = 5475109924 totalSpace = 6873040330
+reading file...
+inTotalSpace = 6081375811
+creating graph...
+Running time : 2.87
+Running time : 2.88
+Running time : 2.8
+Running time : 3.01
+Running time : 2.84
+
+BFS FOR 192 PROCESSORS WITH BYTE
+size = 15499450677
+n = 133633041 m = 5475109924 totalSpace = 6447871367
+reading file...
+inTotalSpace = 5844386278
+creating graph...
+Running time : 2.99
+Running time : 3.05
+Running time : 2.99
+Running time : 3.01
+Running time : 3
+
+BFS FOR 192 PROCESSORS WITH NIBBLE
+size = 10927553539
+n = 133633041 m = 5475109924 totalSpace = 4300608930
+reading file...
+inTotalSpace = 3419751577
+creating graph...
+Running time : 3.3
+Running time : 3.28
+Running time : 3.27
+Running time : 3.25
+Running time : 3.37
+
+BFS FOR 192 PROCESSORS WITH STREAMVEC
+size = 18139509091
+n = 133633041 m = 5475109924 totalSpace = 7725243892
+reading file...
+inTotalSpace = 7207072167
+creating graph...
+Running time : 2.97
+Running time : 2.95
+Running time : 3.09
+Running time : 3.1
+Running time : 3.08
+
+BFS FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 18139509091
+n = 133633041 m = 5475109924 totalSpace = 7725243892
+reading file...
+inTotalSpace = 7207072167
+creating graph...
+Running time : 3.02
+Running time : 3.07
+Running time : 2.99
+Running time : 3.15
+Running time : 3.08
+
+BFS FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 3.13
+Running time : 3.15
+Running time : 3.07
+Running time : 3.06
+Running time : 3.02
+

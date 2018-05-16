@@ -1,0 +1,201 @@
+PAGERANK FOR 192 PROCESSORS WITH BYTERLE
+size = 6448305531
+n = 41652231 m = 1468364884 totalSpace = 2915770055
+reading file...
+inTotalSpace = 2866099740
+creating graph...
+Running time : 1.14
+Running time : 1.15
+Running time : 1.23
+Running time : 1.1
+Running time : 1.11
+
+PAGERANK FOR 192 PROCESSORS WITH BYTE
+size = 6171553239
+n = 41652231 m = 1468364884 totalSpace = 2817765111
+reading file...
+inTotalSpace = 2687352392
+creating graph...
+Running time : 1.15
+Running time : 1.17
+Running time : 1.19
+Running time : 1.18
+Running time : 1.21
+
+PAGERANK FOR 192 PROCESSORS WITH NIBBLE
+size = 5954210901
+n = 41652231 m = 1468364884 totalSpace = 2741742008
+reading file...
+inTotalSpace = 2546033157
+creating graph...
+Running time : 1.86
+Running time : 1.74
+Running time : 1.86
+Running time : 1.82
+Running time : 1.75
+
+PAGERANK FOR 192 PROCESSORS WITH STREAMVEC
+size = 6457711015
+n = 41652231 m = 1468364884 totalSpace = 2950698517
+reading file...
+inTotalSpace = 2840576762
+creating graph...
+Running time : 1.31
+Running time : 1.29
+Running time : 1.32
+Running time : 1.26
+Running time : 1.31
+
+PAGERANK FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 6457711015
+n = 41652231 m = 1468364884 totalSpace = 2950698517
+reading file...
+inTotalSpace = 2840576762
+creating graph...
+Running time : 1.14
+Running time : 1.17
+Running time : 1.19
+Running time : 1.11
+Running time : 1.19
+
+PAGERANK FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 1.11
+Running time : 1.1
+Running time : 1.14
+Running time : 1.21
+Running time : 1.19
+
+PAGERANK FOR 192 PROCESSORS WITH BYTERLE
+size = 6448305531
+n = 41652231 m = 1468364884 totalSpace = 2915770055
+reading file...
+inTotalSpace = 2866099740
+creating graph...
+Running time : 1.17
+Running time : 1.15
+Running time : 1.19
+Running time : 1.11
+Running time : 1.1
+
+PAGERANK FOR 192 PROCESSORS WITH BYTE
+size = 6171553239
+n = 41652231 m = 1468364884 totalSpace = 2817765111
+reading file...
+inTotalSpace = 2687352392
+creating graph...
+Running time : 1.2
+Running time : 1.23
+Running time : 1.14
+Running time : 1.08
+Running time : 1.21
+
+PAGERANK FOR 192 PROCESSORS WITH NIBBLE
+size = 5954210901
+n = 41652231 m = 1468364884 totalSpace = 2741742008
+reading file...
+inTotalSpace = 2546033157
+creating graph...
+Running time : 1.8
+Running time : 1.73
+Running time : 1.91
+Running time : 1.82
+Running time : 1.86
+
+PAGERANK FOR 192 PROCESSORS WITH STREAMVEC
+size = 6457711015
+n = 41652231 m = 1468364884 totalSpace = 2950698517
+reading file...
+inTotalSpace = 2840576762
+creating graph...
+Running time : 1.23
+Running time : 1.26
+Running time : 1.26
+Running time : 1.35
+Running time : 1.28
+
+PAGERANK FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 6457711015
+n = 41652231 m = 1468364884 totalSpace = 2950698517
+reading file...
+inTotalSpace = 2840576762
+creating graph...
+Running time : 1.17
+Running time : 1.14
+Running time : 1.16
+Running time : 1.16
+Running time : 1.14
+
+PAGERANK FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 1.11
+Running time : 1.16
+Running time : 1.08
+Running time : 1.17
+Running time : 1.19
+
+PAGERANK FOR 192 PROCESSORS WITH BYTERLE
+size = 6448305531
+n = 41652231 m = 1468364884 totalSpace = 2915770055
+reading file...
+inTotalSpace = 2866099740
+creating graph...
+Running time : 1.27
+Running time : 1.22
+Running time : 1.18
+Running time : 1.15
+Running time : 1.15
+
+PAGERANK FOR 192 PROCESSORS WITH BYTE
+size = 6171553239
+n = 41652231 m = 1468364884 totalSpace = 2817765111
+reading file...
+inTotalSpace = 2687352392
+creating graph...
+Running time : 1.2
+Running time : 1.19
+Running time : 1.22
+Running time : 1.17
+Running time : 1.23
+
+PAGERANK FOR 192 PROCESSORS WITH NIBBLE
+size = 5954210901
+n = 41652231 m = 1468364884 totalSpace = 2741742008
+reading file...
+inTotalSpace = 2546033157
+creating graph...
+Running time : 1.89
+Running time : 1.85
+Running time : 1.82
+Running time : 1.84
+Running time : 1.71
+
+PAGERANK FOR 192 PROCESSORS WITH STREAMVEC
+size = 6457711015
+n = 41652231 m = 1468364884 totalSpace = 2950698517
+reading file...
+inTotalSpace = 2840576762
+creating graph...
+Running time : 1.18
+Running time : 1.22
+Running time : 1.24
+Running time : 1.31
+Running time : 1.22
+
+PAGERANK FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 6457711015
+n = 41652231 m = 1468364884 totalSpace = 2950698517
+reading file...
+inTotalSpace = 2840576762
+creating graph...
+Running time : 1.15
+Running time : 1.24
+Running time : 1.15
+Running time : 1.21
+Running time : 1.19
+
+PAGERANK FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 1.1
+Running time : 1.2
+Running time : 1.14
+Running time : 1.11
+Running time : 1.14
+

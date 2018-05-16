@@ -11,16 +11,14 @@ dataDir = "../inputs/"
 resultsDir = "../results/"
 applications = ["decoderSpeed", "PageRank", "BFS","BC","Radii","Components"]
 applications_weighted = ["BellmanFord"]
+testfiles, testfiles_weighted, testfiles_long = [], [], []
 
-# testfiles = [("orkut", "3000"), ("twitter", "300000"), ("nlp", "300000"), ("livejournal", "400000")]
+
+testfiles = [("livejournal", "400000"), ("orkut", "3000"), ("nlp", "300000"), ("twitter", "300000")]
 # testfiles_weighted = [("orkut_weighted", "1"), ("twitter_weighted", "1"), ("nlp_weighted", "1"), ("livejournal_weighted", "1")]
-testfiles = [("orkut", "3000"), ("nlp", "300000"), ("livejournal", "400000")]
-testfiles_weighted = [("orkut_weighted", "1"), ("nlp_weighted", "1"), ("livejournal_weighted", "1")]
-# testfiles = [("twitter", "300000")]
-# testfiles_weighted = [("twitter_weighted", "1")]
-testfiles_weighted = []
+testfiles_long = [("uk-union", "1000000")]
 
-processors = [144]
+processors = [192]
 
 def signal_handler(signal,frame):
   print "bye\n"
@@ -28,6 +26,7 @@ def signal_handler(signal,frame):
 signal.signal(signal.SIGINT,signal_handler)
 
 def shellGetOutput(command):
+  # input the command to the terminal and return the output
   print(command)
   process = subprocess.Popen(command,shell=True,stdout=subprocess.PIPE, stderr=subprocess.PIPE)
   output, err = process.communicate()
@@ -36,9 +35,9 @@ def shellGetOutput(command):
       raise NameError(command+"\n"+output+err)
   return output
 
-def makeclean():
-  # also delete any results in the directories
-  for testfile in testfiles + testfiles_weighted:
+def makeclean(files):
+  # make directories and remove any non-encoding-related result files
+  for testfile in files:
     path = resultsDir + testfile[0]
     if not os.path.exists(path):
       os.makedirs(path)
@@ -46,19 +45,22 @@ def makeclean():
       if "encoding" not in f:
         os.remove(f)
 
-def make(compression):
-  css = "make clean; make CILK=1 {}=1 -j".format(compression.upper())
+def make(compression, long=False):
+  # recompile Ligra according to the compression scheme
+  flags = "LONG=1 LOWMEM=1 " if long else "" 
+  css = "make clean; make CILK=1 {}=1 {}-j".format(compression.upper(), flags)
   shellGetOutput(css)
   sys.stdout.flush()
 
-def encode(compression):
-  # don't bother encoding if it's already there
-  for testfile in testfiles + testfiles_weighted:
+def encode(files, compression):
+  # encode the files (if not already there)
+  for testfile in files:
     path = dataDir + testfile[0] + "/"
     if os.path.isfile(path + compression):
       continue
     flags = " -w" if "weighted" in testfile[0] else ""
-    flags += " -s" if "twitter" not in testfile[0] else ""
+    flags += " -s" if testfile[0] not in ["twitter", "twitter_weighted", "uk-union", "uk-union_weighted"] else ""
+    flags += " -b" if testfile in testfiles_long else ""
 
     css = "./encoder{} {} {}".format(flags, path + "uncompressed", path + compression)
     output = shellGetOutput(css)
@@ -71,13 +73,15 @@ def encode(compression):
       f.write("\n")
 
 def test_code(files, apps, compression):
+  # run the apps on the encodings
   new_compression = "streamvec" if compression == "streamvbyte" else compression # they share the same encoding
   for app in apps:
     for testfile in files:
       for p in processors:
         parallel = "numactl -i all" if p > 1 else ""
-        flags = " -s" if "twitter" not in testfile[0] else ""
+        flags = " -s" if testfile[0] not in ["twitter", "twitter_weighted", "uk-union", "uk-union_weighted"] else ""
         flags += " -c" if compression != "uncompressed" else ""
+        flags += " -b" if (testfile in testfiles_long and compression == "uncompressed") else ""
         flags += " -maxiters 1" if app == "PageRank" else ""
         flags += " -r {}".format(testfile[1])
         file_path = dataDir + testfile[0] + "/" + new_compression
@@ -93,12 +97,22 @@ def test_code(files, apps, compression):
           f.write("\n")
 
 if __name__ == '__main__':
-  makeclean()
+  # # for regular graphs
+  # makeclean(testfiles + testfiles_weighted)
   for compression in ["byterle", "byte", "nibble", "streamvec", "streamvbyte", "uncompressed"]:
     if compression != "uncompressed":
       make(compression)
     if compression not in ["streamvbyte", "uncompressed"]:
-      encode(compression)
+      encode(testfiles + testfiles_weighted, compression)
     test_code(testfiles, applications, compression)
-    if compression not in ["streamvec", "streamvbyte"]:
-      test_code(testfiles_weighted, applications_weighted, compression)
+    # if compression not in ["streamvbyte", "streamvec"]:
+    #   test_code(testfiles_weighted, applications_weighted, compression)
+
+  # for graphs that need LONG=1
+  # makeclean(testfiles_long)
+  for compression in ["byterle", "byte", "nibble", "streamvec", "streamvbyte", "uncompressed"]:
+    if compression != "uncompressed":
+      make(compression, long=True)
+    if compression not in ["streamvbyte", "uncompressed"]:
+      encode(testfiles_long, compression)
+    test_code(testfiles_long, applications, compression)

@@ -1,0 +1,186 @@
+RADII FOR 192 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+Running time : 14.8
+Running time : 15.1
+Running time : 14.8
+Running time : 14.3
+Running time : 14.8
+
+RADII FOR 192 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+Running time : 14.4
+Running time : 14.7
+Running time : 14.7
+Running time : 14.9
+Running time : 15
+
+RADII FOR 192 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+Running time : 27.4
+Running time : 27.6
+Running time : 27.7
+Running time : 27.3
+Running time : 27.2
+
+RADII FOR 192 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 16.3
+Running time : 16.5
+Running time : 16.6
+Running time : 16.8
+Running time : 16.3
+
+RADII FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 15.2
+Running time : 15.4
+Running time : 15.4
+Running time : 15.3
+Running time : 15.6
+
+RADII FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 12.3
+Running time : 12.1
+Running time : 12
+Running time : 12.5
+Running time : 12.2
+
+RADII FOR 192 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+Running time : 15
+Running time : 14.8
+Running time : 14.8
+Running time : 14.7
+Running time : 14.9
+
+RADII FOR 192 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+Running time : 15.4
+Running time : 15.2
+Running time : 15.3
+Running time : 15.1
+Running time : 14.8
+
+RADII FOR 192 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+Running time : 27.5
+Running time : 27.5
+Running time : 27.4
+Running time : 27.4
+Running time : 27.7
+
+RADII FOR 192 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 16.7
+Running time : 17.1
+Running time : 16.5
+Running time : 16.7
+Running time : 16.7
+
+RADII FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 16.1
+Running time : 15.9
+Running time : 15.9
+Running time : 15.9
+Running time : 16.1
+
+RADII FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 12.6
+Running time : 12.6
+Running time : 12.5
+Running time : 12.1
+Running time : 12.4
+
+RADII FOR 192 PROCESSORS WITH BYTERLE
+size = 1155541005
+n = 27993601 m = 746478752 totalSpace = 931592169
+reading file...
+creating graph...
+Running time : 14.8
+Running time : 14.8
+Running time : 14.6
+Running time : 15
+Running time : 14.8
+
+RADII FOR 192 PROCESSORS WITH BYTE
+size = 1063985422
+n = 27993601 m = 746478752 totalSpace = 840036586
+reading file...
+creating graph...
+Running time : 15.3
+Running time : 15.4
+Running time : 14.6
+Running time : 14.8
+Running time : 15.2
+
+RADII FOR 192 PROCESSORS WITH NIBBLE
+size = 815406983
+n = 27993601 m = 746478752 totalSpace = 591458147
+reading file...
+creating graph...
+Running time : 27.1
+Running time : 27.8
+Running time : 27.6
+Running time : 27.7
+Running time : 27.6
+
+RADII FOR 192 PROCESSORS WITH STREAMVEC
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 16.3
+Running time : 16.4
+Running time : 16.5
+Running time : 16.5
+Running time : 16.3
+
+RADII FOR 192 PROCESSORS WITH STREAMVBYTE
+size = 1233509023
+n = 27993601 m = 746478752 totalSpace = 1009560187
+reading file...
+creating graph...
+Running time : 15.7
+Running time : 15.5
+Running time : 15.6
+Running time : 16
+Running time : 15.7
+
+RADII FOR 192 PROCESSORS WITH UNCOMPRESSED
+Running time : 12.6
+Running time : 12.6
+Running time : 12.5
+Running time : 12.6
+Running time : 12.7
+
