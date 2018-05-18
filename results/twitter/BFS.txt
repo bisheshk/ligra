@@ -199,3 +199,15 @@ Running time : 0.234
 Running time : 0.237
 Running time : 0.242
 
+BFS FOR 1 PROCESSORS WITH BYTERLE
+size = 6448305531
+n = 41652231 m = 1468364884 totalSpace = 2915770055
+reading file...
+inTotalSpace = 2866099740
+creating graph...
+Running time : 8.04
+Running time : 8.11
+Running time : 8.11
+Running time : 8.11
+Running time : 8.1
+

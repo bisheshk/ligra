@@ -184,3 +184,76 @@ Running time : 0.0442
 Running time : 0.0443
 Running time : 0.0488
 
+BC FOR 1 PROCESSORS WITH BYTERLE
+size = 165669905
+n = 4036538 m = 69362378 totalSpace = 133377573
+reading file...
+creating graph...
+Running time : 2.14
+Running time : 2.17
+Running time : 2.05
+Running time : 2.04
+Running time : 2.03
+
+BC FOR 1 PROCESSORS WITH BYTE
+size = 152057666
+n = 4036538 m = 69362378 totalSpace = 119765334
+reading file...
+creating graph...
+Running time : 1.9
+Running time : 1.91
+Running time : 1.93
+Running time : 1.9
+Running time : 1.89
+
+BC FOR 1 PROCESSORS WITH NIBBLE
+size = 143191482
+n = 4036538 m = 69362378 totalSpace = 110899150
+reading file...
+creating graph...
+Running time : 3.26
+Running time : 3.25
+Running time : 3.23
+Running time : 3.23
+Running time : 3.22
+
+BC FOR 1 PROCESSORS WITH NIBBLE
+size = 143191482
+n = 4036538 m = 69362378 totalSpace = 110899150
+reading file...
+creating graph...
+Running time : 3.24
+Running time : 3.24
+Running time : 3.23
+Running time : 3.23
+Running time : 3.23
+
+BC FOR 1 PROCESSORS WITH STREAMVEC
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 1.87
+Running time : 1.86
+Running time : 1.85
+Running time : 1.84
+Running time : 1.85
+
+BC FOR 1 PROCESSORS WITH STREAMVBYTE
+size = 162598351
+n = 4036538 m = 69362378 totalSpace = 130306019
+reading file...
+creating graph...
+Running time : 2.16
+Running time : 2.17
+Running time : 2.17
+Running time : 2.16
+Running time : 2.16
+
+BC FOR 1 PROCESSORS WITH UNCOMPRESSED
+Running time : 1.25
+Running time : 1.23
+Running time : 1.22
+Running time : 1.22
+Running time : 1.21
+

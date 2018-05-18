@@ -202,3 +202,15 @@ decoding time : 3.34
 decoding time : 3.24
 22956815
 
+DECODERSPEED FOR 1 PROCESSORS WITH BYTERLE
+size = 6448305531
+n = 41652231 m = 1468364884 totalSpace = 2915770055
+reading file...
+creating graph...
+decoding time : 46.8
+decoding time : 46.8
+decoding time : 46.8
+decoding time : 46.8
+decoding time : 46.8
+21482341
+

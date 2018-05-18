@@ -184,3 +184,47 @@ Running time : 0.202
 Running time : 0.207
 Running time : 0.202
 
+RADII FOR 1 PROCESSORS WITH BYTERLE
+size = 466272435
+n = 3072627 m = 234370166 totalSpace = 441691391
+reading file...
+creating graph...
+Running time : 11.2
+Running time : 11.4
+Running time : 11.4
+Running time : 11.4
+Running time : 11.4
+
+RADII FOR 1 PROCESSORS WITH BYTERLE
+size = 466272435
+n = 3072627 m = 234370166 totalSpace = 441691391
+reading file...
+creating graph...
+Running time : 10.7
+Running time : 10.9
+Running time : 10.9
+Running time : 10.9
+Running time : 10.9
+
+RADII FOR 1 PROCESSORS WITH BYTE
+size = 440294232
+n = 3072627 m = 234370166 totalSpace = 415713188
+reading file...
+creating graph...
+Running time : 10
+Running time : 10.2
+Running time : 10.2
+Running time : 10.2
+Running time : 10.2
+
+RADII FOR 1 PROCESSORS WITH NIBBLE
+size = 420669061
+n = 3072627 m = 234370166 totalSpace = 396088017
+reading file...
+creating graph...
+Running time : 18.9
+Running time : 19.2
+Running time : 19.2
+Running time : 19.2
+Running time : 19.2
+

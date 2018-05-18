@@ -199,3 +199,15 @@ Running time : 1.14
 Running time : 1.11
 Running time : 1.14
 
+PAGERANK FOR 1 PROCESSORS WITH BYTERLE
+size = 6448305531
+n = 41652231 m = 1468364884 totalSpace = 2915770055
+reading file...
+inTotalSpace = 2866099740
+creating graph...
+Running time : 28.1
+Running time : 28.3
+Running time : 28.3
+Running time : 28.3
+Running time : 28.3
+
